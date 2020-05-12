@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <Form :initial-values="values" :schema="schema">
+    <Form :schema="schema">
       <Field path="title" name="名称"></Field>
     </Form>
   </div>

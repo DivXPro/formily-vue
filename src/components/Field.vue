@@ -1,11 +1,7 @@
 <template>
   <el-form-item :label="name">
-    <el-input
-      :value="value"
-      @change="mutators.change"
-      @blue="mutators.blur"
-      @focus="mutators.focus"
-    />
+    <!-- <el-input :value="value" @input="handleChange" /> -->
+    <el-button @click="handleChange('xxx')">do</el-button>
   </el-form-item>
 </template>
 

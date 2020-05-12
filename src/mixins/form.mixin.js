@@ -1,5 +1,7 @@
 import { createForm } from '@formily/core';
 
+let form;
+
 export default {
   props: [
     'values',
@@ -19,19 +21,17 @@ export default {
   ],
   data() {
     return {
-      formData: null,
       provideCache: {}
     };
   },
   provide() {
     return {
-      getForm: () => this.formData
+      getForm: () => form
     };
   },
   created() {
-    this.formData = createForm({
-      initialValues: this.initialValues,
-      values: this.values
+    form = createForm({
+      initialValues: { id: 123, title: 'xxx' }
     });
   }
 };
